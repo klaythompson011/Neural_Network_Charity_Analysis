@@ -44,8 +44,6 @@ o	Attempt #1: Removed additional columns and reviewed for possible outliers
   
   ![First_Accuracy](Resources/First_Accuracy.png)
   
-  [AlphabetSoupCharity_Optimization_FirstAttempt](http:/wwww.https://github.com/klaythompson011/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity_Optimization_FirstAttempt.ipynb.com)
-
 o	Attempt #2: Adjusted the number of layers and activation function in model, all other changes made in Attempt #1 were kept. 
   
   - Third layer was added to the model. The number of neurons set was at 10. Activation function was changed to sigmoid for hidden layers and to tanh
