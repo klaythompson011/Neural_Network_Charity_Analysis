@@ -32,7 +32,7 @@ Three additional attempts were made to increase the model performance  above 75%
 o	Attempt #1: Removed additional columns and reviewed for possible outliers
 
   - Columns “SPECIAL_CONSIDERATIONS” and “STATUS” were removed. The two columns were selected because data within the columns was binary and was
-  overwhelmingly one-sided. For example, there were only 5 instances in “STATUS” column that were 0 as compared to 32,294 that had 1. By removing these two columns, the number of inputs decreased to 40.  
+  overwhelmingly one-sided. For example, there were only 5 instances in “STATUS” column that were 0 as compared to 34,294 that had 1. By removing these two columns, the number of inputs decreased to 40.  
   	
   - Describe() method was used to determine the range of column “ASK_AMT”, noting the min ask amount was 5,000 while the max ask amount exceeded 8
   billion. Given the significant range, lower and upper bounds were calculated for “ASK_AMT” column to identify possible outliers. The lower bound
