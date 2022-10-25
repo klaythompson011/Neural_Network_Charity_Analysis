@@ -10,6 +10,7 @@ RESULTS
 
 The business team at Alphabet Soup provided a CSV file containing more than 34,000 organizations that received funding from Alphabet Soup over the
 years. The file contained different data about each organization. 
+
 The following data preprocessing was performed. 
   - Target variable was set as column “IS_SUCCESSFUL”.
   
@@ -42,6 +43,8 @@ o	Attempt #1: Removed additional columns and reviewed for possible outliers
   - Model was re-ran achieving an accuracy of 53.1%.
   
   ![First_Accuracy](Resources/First_Accuracy.png)
+  
+  [AlphabetSoupCharity_Optimization_FirstAttempt](http:/wwww.AlphabetSoupCharity_Optimization_FirstAttempt.com)
 
 o	Attempt #2: Adjusted the number of layers and activation function in model, all other changes made in Attempt #1 were kept. 
   
