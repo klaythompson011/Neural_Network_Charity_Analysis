@@ -2,10 +2,14 @@
 
 ## 
 PURPOSE
+
+###
 The purpose of this analysis is to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup. 
 
 ## 
 RESULTS
+
+###
 The business team at Alphabet Soup provided a CSV file containing more than 34,000 organizations that received funding from Alphabet Soup over the
 years. The file contained different data about each organization. 
 The following data preprocessing was performed. 
@@ -46,6 +50,8 @@ o	Attempt #3: Created bins for “ASK_AMT” column
 
 ##
 SUMMARY
+
+###
 As the original model achieved an accuracy of 60.1%, three additional attempts were made to increase the accuracy by changing various aspects of the 
 model. Of the three attempts, the third attempt resulted in the highest accuracy at 65.4%. In this model, bins were created to bucket the data in the
 column “ASK_AMT”. Also, activation functions sigmoid and tanh were used for first three hidden layers and output layer, respectively. Many of the
