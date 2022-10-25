@@ -3,24 +3,28 @@
 ## 
 PURPOSE
 
-###
 The purpose of this analysis is to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup. 
 
 ## 
 RESULTS
 
-###
 The business team at Alphabet Soup provided a CSV file containing more than 34,000 organizations that received funding from Alphabet Soup over the
 years. The file contained different data about each organization. 
 The following data preprocessing was performed. 
-•	  Target variable was set as column “IS_SUCCESSFUL”.
-•	  Feature variabls were set to columns “APPLICATION_TYPE”, “CLASSIFICATION”, “USE_CASE”, “ORGANIZATION”, “STATUS”, “INCOME_AMT”,
+  - Target variable was set as column “IS_SUCCESSFUL”.
+  
+  - Feature variabls were set to columns “APPLICATION_TYPE”, “CLASSIFICATION”, “USE_CASE”, “ORGANIZATION”, “STATUS”, “INCOME_AMT”,
 “SPECIAL_CONSIDERATIONS” and “ASK_AMT”.
-•	  Non-beneficial columns “EIN” and “NAME” were removed.
+
+  - Non-beneficial columns “EIN” and “NAME” were removed.
+ 
 The following compiling, training and evaluation of the model was performed. 
-•	  Number of inputs was set at 43 and number of layers was set at 2. The first layer was set at 80 neurons and second layer at 30 neurons. Activation 
-function for both layers was set to relu, while the activation function for output layer was set to sigmoid.  
-•	  Model achieved an accuracy of 60.1%. 
+  - Number of inputs was set at 43 and number of layers was set at 2. The first layer was set at 80 neurons and second layer at 30 neurons. 
+Activation function for both layers was set to relu, while the activation function for output layer was set to sigmoid.  
+
+  - Model achieved an accuracy of 60.1%. 
+   
+  ![Original_Accuracy](Resources/Original_Accuracy.png)
 
 Three additional attempts were made to increase the model performance  above 75%. 
 
