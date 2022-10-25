@@ -30,22 +30,28 @@ o	Attempt #1: Removed additional columns and reviewed for possible outliers
   	Describe() method was used to determine the range of column “ASK_AMT”, noting the min ask amount was 5,000 while the max ask amount exceeded 8
   billion. Given the significant range, lower and upper bounds were calculated for “ASK_AMT” column to identify possible outliers. The lower bound
   was calculated as 887 (=Q1 - 1.5 * IQR) and upper bound as 11,855 (=Q3 + 1.5*IQR). Column “ASK_AMT” was filtered to exclude the outliers.
+  
   ![First_Metrics](Resources/First_Metrics.png)
   	Model was re-ran achieving an accuracy of 53.1%.
+  
   ![First_Accuracy](Resources/First_Accuracy.png)
 
 o	Attempt #2: Adjusted the number of layers and activation function in model, all other changes made in Attempt #1 were kept. 
   	Third layer was added to the model. The number of neurons set was at 10. Activation function was changed to sigmoid for hidden layers and to tanh
   for output layer. 
+  
   ![Second_ModelInputs](Resources/Second_ModelInputs.png)
   	Model was re-ran achieving an accuracy of 53.2%. 
+  
   ![Second_Accuracy](Resources/Second_Accuracy.png)
 
 o	Attempt #3: Created bins for “ASK_AMT” column
   	Removed any filters in column “ASK_AMT” made in previous models. All other changes made were kept. 
   	Created bins to bucket data in column “ASK_AMT” reducing the number of unique instances from 8,747 to 5. 
+  
   ![Third_Bins](Resources/Third_Bins.png)
   	Model was re-ran achieving an accuracy of 65.4%.
+  
   ![Third_Accuracy](Resources/Third_Accuracy.png)
 
 ##
