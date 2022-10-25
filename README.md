@@ -14,7 +14,7 @@ years. The file contained different data about each organization.
 The following data preprocessing was performed. 
   - Target variable was set as column “IS_SUCCESSFUL”.
   
-  - Feature variabls were set to columns “APPLICATION_TYPE”, “CLASSIFICATION”, “USE_CASE”, “ORGANIZATION”, “STATUS”, “INCOME_AMT”,
+  - Feature variables were set to columns “APPLICATION_TYPE”, “CLASSIFICATION”, “USE_CASE”, “ORGANIZATION”, “STATUS”, “INCOME_AMT”,
 “SPECIAL_CONSIDERATIONS” and “ASK_AMT”.
 
   - Non-beneficial columns “EIN” and “NAME” were removed.
@@ -32,7 +32,7 @@ Three additional attempts were made to increase the model performance  above 75%
 o	Attempt #1: Removed additional columns and reviewed for possible outliers
 
   - Columns “SPECIAL_CONSIDERATIONS” and “STATUS” were removed. The two columns were selected because data within the columns was binary and was
-  overwhelmingly one-sided. For example, there were only 5 instances in “STATUS” column that were 0 as compared to 32,294 that had 1.  
+  overwhelmingly one-sided. For example, there were only 5 instances in “STATUS” column that were 0 as compared to 32,294 that had 1. By removing these two columns, the number of inputs decreased to 40.  
   	
   - Describe() method was used to determine the range of column “ASK_AMT”, noting the min ask amount was 5,000 while the max ask amount exceeded 8
   billion. Given the significant range, lower and upper bounds were calculated for “ASK_AMT” column to identify possible outliers. The lower bound
@@ -46,7 +46,7 @@ o	Attempt #1: Removed additional columns and reviewed for possible outliers
   
 o	Attempt #2: Adjusted the number of layers and activation function in model, all other changes made in Attempt #1 were kept. 
   
-  - Third layer was added to the model. The number of neurons set was at 10. Activation function was changed to sigmoid for hidden layers and to tanh
+  - Third layer was added to the model. The number of neurons was set to 10. Activation function was changed to sigmoid for hidden layers and to tanh
   for output layer. 
   
   ![Second_ModelInputs](Resources/Second_ModelInputs.png)
@@ -69,9 +69,14 @@ o	Attempt #3: Created bins for “ASK_AMT” column
 ##
 SUMMARY
 
-As the original model achieved an accuracy of 60.1%, three additional attempts were made to increase the accuracy by changing various aspects of the 
-model. Of the three attempts, the third attempt resulted in the highest accuracy at 65.4%. In this model, bins were created to bucket the data in the
-column “ASK_AMT”. Also, activation functions sigmoid and tanh were used for first three hidden layers and output layer, respectively. Many of the
-changes were made on a trial and error basis. Additional adjustments can be made to the model in third attempt to continue to increase the 
-performance, including adding more neurons to hidden layers, adding more hidden layers and/or changing the activation functions for the layers. It is
+As the original model achieved an accuracy of 60.1%, three additional attempts were made to increase the
+accuracy by changing various aspects of the 
+model. Of the three attempts, the third attempt resulted in the highest accuracy at 65.4%. In this model, bins 
+were created to bucket the data in the
+column “ASK_AMT”. Also, activation functions sigmoid and tanh were used for the first three hidden layers and
+output layer, respectively. Many of the
+changes were made on a trial and error basis. Additional adjustments can be made to the model in the third attempt 
+to continue to increase the 
+performance, including adding more neurons to hidden layers, adding more hidden layers and/or changing the 
+activation functions for the layers. It is
 not recommended to increase the number of epochs as loss and accuracy results tapered off.  
